@@ -1,123 +1,132 @@
 import { motion } from 'framer-motion';
 import CountUpPkg from 'react-countup';
 const CountUp = CountUpPkg.default || CountUpPkg;
-import { Star, Truck, WashingMachine, Sparkles, Shirt } from 'lucide-react';
+import { CheckCircle2, Truck, MessageCircle, Star, Shirt, Users, MapPin, ShieldCheck } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { openWhatsApp } from '../utils/constants';
 
 export default function Hero() {
-  return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-50">
-      {/* Background Gradient & Animated Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-100 via-slate-50 to-slate-50 -z-10" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] mix-blend-multiply -z-20" />
-      
-      {/* Floating Elements */}
-      <motion.div 
-        animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 right-1/4 text-sky-200/50 -z-10"
-      >
-        <WashingMachine size={120} />
-      </motion.div>
-      <motion.div 
-        animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-1/4 left-1/4 text-sky-200/50 -z-10"
-      >
-        <Shirt size={100} />
-      </motion.div>
+  const features = [
+    "Fabric Safe Cleaning",
+    "Expert Stain Removal",
+    "Eco Friendly Process",
+    "Hygienic Packaging",
+    "On-Time Delivery"
+  ];
 
+  const stats = [
+    {
+      icon: (
+        <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
+          <span className="font-black text-primary text-xl leading-none w-6 h-6 flex items-center justify-center">G</span>
+        </div>
+      ),
+      value: "4.9",
+      suffix: " ★★★★★",
+      label: "Google Rating",
+      isCount: true
+    },
+    { icon: <Shirt size={28} />, value: "25000", suffix: "+", label: "Garments Cleaned", isCount: true },
+    { icon: <Users size={28} />, value: "5000", suffix: "+", label: "Happy Families", isCount: true },
+    { icon: <MapPin size={28} />, value: "Serving", suffix: "", label: "Entire Gurgaon", isCount: false },
+    { icon: <ShieldCheck size={28} />, value: "100%", suffix: "", label: "Quality Guarantee", isCount: false },
+  ];
+
+  return (
+    <section className="relative pt-32 pb-10 overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* Main Hero Content */}
+        <div className="grid lg:grid-cols-12 gap-8 items-center mb-0">
           
+          {/* Left Column - Text */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-2xl"
+            className="lg:col-span-7 max-w-3xl"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-100 text-primary text-sm font-medium mb-6">
-              <Sparkles size={16} />
-              <span>Premium Care in Gurgaon</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 text-slate-900">
-              Laundry. Dry Cleaning. Car Detailing. <br/>
-              <span className="text-gradient">All From Your Doorstep.</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-primary tracking-tight">
+              Premium Dry Cleaning & <br className="hidden sm:block" />
+              Laundry <span className="text-accent">Delivered to</span> <br className="hidden sm:block" />
+              <span className="text-accent">Your Doorstep.</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-xl leading-relaxed">
-              Professional laundry care, steam ironing, dry cleaning and doorstep car detailing across Gurgaon. Experience the luxury of convenience.
+            
+            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
+              Professional Dry Cleaning, Laundry, Shoe Cleaning, Curtain Cleaning, Sofa Cleaning & Carpet Cleaning with Free Pickup & Delivery Across Gurgaon.
             </p>
             
+            {/* Features Row */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              {features.map((feature, idx) => (
+                <div key={idx} className="flex items-center gap-1.5 text-sm font-semibold text-slate-700">
+                  <CheckCircle2 size={18} className="text-accent" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" onClick={openWhatsApp} className="w-full sm:w-auto text-lg">
-                Book on WhatsApp
+              <Button size="lg" onClick={openWhatsApp} className="bg-accent hover:bg-accent/90 text-white flex items-center justify-center gap-2">
+                <Truck size={20} />
+                Book Free Pickup
               </Button>
-              <Button size="lg" variant="secondary" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth'})} className="w-full sm:w-auto text-lg">
-                View Services
+              <Button size="lg" variant="outline" onClick={openWhatsApp} className="border-2 border-slate-200 hover:border-slate-300 text-slate-800 bg-white flex items-center justify-center gap-2">
+                <MessageCircle size={20} />
+                WhatsApp Us
               </Button>
             </div>
           </motion.div>
 
-          <div className="relative hidden lg:block h-[600px]">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="absolute top-10 right-10 glass-card bg-white p-6 rounded-2xl w-64 shadow-lg"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-sky-50 p-3 rounded-full text-primary">
-                  <Star fill="currentColor" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-3xl font-bold text-slate-800">
-                    <CountUp end={4.9} decimals={1} duration={2} />★
-                  </h4>
-                  <p className="text-xs text-slate-500">Customer Rating</p>
-                </div>
-              </div>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5] [mask-image:linear-gradient(to_left,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_left,black_85%,transparent_100%)]">
+              <img 
+                src="/hero-person.jpg" 
+                alt="Delivery Executive holding laundry bag" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="absolute top-1/2 -left-10 glass-card bg-white p-6 rounded-2xl w-64 shadow-lg"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-sky-50 p-3 rounded-full text-primary">
-                  <Shirt size={24} />
-                </div>
-                <div>
-                  <h4 className="text-3xl font-bold text-slate-800">
-                    <CountUp end={25000} separator="," duration={2.5} />+
-                  </h4>
-                  <p className="text-xs text-slate-500">Garments Cleaned</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="absolute bottom-10 right-20 glass-card bg-white p-6 rounded-2xl w-64 shadow-lg"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="bg-sky-50 p-3 rounded-full text-primary">
-                  <Truck size={24} />
-                </div>
-                <div>
-                  <h4 className="text-3xl font-bold text-slate-800">
-                    <CountUp end={5000} separator="," duration={2} />+
-                  </h4>
-                  <p className="text-xs text-slate-500">Happy Customers</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
         </div>
+
+        {/* Stats Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="bg-primary rounded-2xl md:rounded-full py-6 px-4 md:px-8 shadow-2xl relative z-20 -mt-16"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 divide-y divide-white/10 md:divide-y-0 md:divide-x">
+            {stats.map((stat, idx) => (
+              <div key={idx} className={`flex items-center justify-center gap-4 ${idx !== 0 ? 'pt-4 md:pt-0' : ''}`}>
+                <div className="text-white shrink-0">
+                  {stat.icon}
+                </div>
+                <div className="text-white">
+                  <div className="font-bold text-lg leading-tight flex items-center gap-1">
+                    {stat.isCount ? (
+                      <CountUp end={parseFloat(stat.value)} decimals={stat.value.includes('.') ? 1 : 0} duration={2.5} separator="," />
+                    ) : (
+                      <span>{stat.value}</span>
+                    )}
+                    <span>{stat.suffix}</span>
+                  </div>
+                  <div className="text-xs text-white/70 font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+        
       </div>
     </section>
   );

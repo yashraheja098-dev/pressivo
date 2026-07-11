@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0ea5e9;
-  --color-secondary: #f8fafc;
-  --color-accent: #ffffff;
+  --color-primary: #0A1B44;
+  --color-accent: #F5B400;
+  --color-background: #F7F9FC;
   --font-sans: "Inter", sans-serif;
 }
 
@@ -13,7 +13,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-primary font-sans antialiased overflow-x-hidden;
   }
 }
 

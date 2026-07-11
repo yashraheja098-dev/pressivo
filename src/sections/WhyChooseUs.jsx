@@ -15,7 +15,7 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <section id="why-us" className="py-24 relative overflow-hidden bg-white">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-100 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] -z-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
                   transition={{ delay: idx * 0.1, duration: 0.5 }}
                   className="flex gap-4"
                 >
-                  <div className="bg-sky-50 w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-sky-100">
+                  <div className="bg-white w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border border-slate-200">
                     <reason.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>

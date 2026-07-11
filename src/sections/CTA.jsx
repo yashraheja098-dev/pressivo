@@ -4,7 +4,7 @@ import { openWhatsApp } from '../utils/constants';
 
 export default function CTA() {
   return (
-    <section className="py-24 relative overflow-hidden bg-sky-50">
+    <section className="py-24 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-primary/5 -z-20" />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582735689369-4fe89b711461?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-[0.03] mix-blend-multiply -z-20" />
       <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent -z-10" />

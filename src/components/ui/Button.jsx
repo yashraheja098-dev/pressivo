@@ -6,7 +6,7 @@ const Button = React.forwardRef(({ className, variant = 'primary', size = 'defau
   const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50";
   
   const variants = {
-    primary: "bg-primary text-white hover:bg-sky-600 shadow-md hover:shadow-lg hover:shadow-primary/30 font-semibold",
+    primary: "bg-accent text-white hover:bg-accent/90 shadow-md hover:shadow-lg hover:shadow-accent/30 font-bold",
     secondary: "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 shadow-sm",
     outline: "border border-primary text-primary hover:bg-primary/5",
     ghost: "hover:bg-slate-100 text-slate-600",

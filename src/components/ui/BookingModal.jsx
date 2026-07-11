@@ -62,7 +62,7 @@ export default function BookingModal() {
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden pointer-events-auto"
             >
-              <div className="p-6 bg-sky-50 border-b border-sky-100 flex items-center justify-between">
+              <div className="p-6 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-slate-800">Book Service</h3>
                   <p className="text-slate-600 text-sm mt-1">Please fill in your details to continue on WhatsApp.</p>

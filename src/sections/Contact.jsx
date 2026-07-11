@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="mt-16 grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="space-y-8">
             <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
-              <div className="bg-sky-50 border border-sky-100 p-3 rounded-full text-primary shrink-0">
+              <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
@@ -24,7 +24,7 @@ export default function Contact() {
             </div>
 
             <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
-              <div className="bg-sky-50 border border-sky-100 p-3 rounded-full text-primary shrink-0">
+              <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <Phone size={24} />
               </div>
               <div>
@@ -35,7 +35,7 @@ export default function Contact() {
             </div>
 
             <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
-              <div className="bg-sky-50 border border-sky-100 p-3 rounded-full text-primary shrink-0">
+              <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <Mail size={24} />
               </div>
               <div>
