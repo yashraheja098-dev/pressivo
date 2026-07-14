@@ -37,6 +37,21 @@ const services = [
     title: "Doorstep Car Detailing",
     description: "Premium interior and exterior car cleaning services right at your doorstep.",
     image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    title: "Shoe Cleaning",
+    description: "Deep cleaning and restoration for your favorite pairs of shoes and sneakers.",
+    image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    title: "Sofa Cleaning",
+    description: "Professional dry vacuuming and deep shampooing for your couches and sofas.",
+    image: "https://images.unsplash.com/photo-1550254478-ead40cc54513?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
+    title: "Curtain Cleaning",
+    description: "Expert dust removal and steam cleaning for your drapes and curtains.",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 
