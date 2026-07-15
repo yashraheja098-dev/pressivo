@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Process />
       <Services />
       <WhyChooseUs />
-      <Process />
       <Pricing />
       <BeforeAfterShowcase />
       <Testimonials />

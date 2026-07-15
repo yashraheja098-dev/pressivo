@@ -11,7 +11,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Steam Ironing",
+    title: "Standard Steam Ironing",
     description: "Crisp, wrinkle-free steam ironing.",
     image: "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1000&auto=format&fit=crop"
   },
@@ -42,7 +42,7 @@ export default function Services() {
   const navigate = useNavigate();
 
   return (
-    <section id="services" className="pt-24 pb-16 relative bg-background overflow-hidden">
+    <section id="services" className="pt-12 pb-16 relative bg-background overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Premium Care For Everything" 

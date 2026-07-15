@@ -11,7 +11,7 @@ const pricingCategories = [
       { name: "Wash & Fold", price: "₹80 / KG", note: "Everyday wear, neatly folded" },
       { name: "Wash & Iron", price: "₹110 / KG", note: "Washed & professionally ironed" },
       { name: "Premium Laundry", price: "₹150 / KG", note: "Individual care & premium packing" },
-      { name: "Standard Steam Iron", price: "₹10 / Piece", note: "Crisp, wrinkle-free finish" },
+      { name: "Standard Steam Ironing", price: "₹12+ / Piece", note: "Crisp, wrinkle-free finish" },
       { name: "Premium Steam Iron", price: "₹25 / Piece", note: "Special care for delicate fabrics" },
     ]
   },
@@ -19,21 +19,22 @@ const pricingCategories = [
     category: "Dry Cleaning",
     description: "Expert stain removal and preservation for valuable garments.",
     items: [
-      { name: "Shirts / Tops", price: "₹99 / Piece", note: "Stain removal included" },
+      { name: "Shirts / Tops", price: "₹120 / Piece", note: "Stain removal included" },
       { name: "Trousers / Jeans", price: "₹120 / Piece", note: "Perfect crease" },
-      { name: "Suit (2 Piece)", price: "₹349 / Set", note: "Jacket & Trousers" },
-      { name: "Saree / Heavy Dress", price: "₹399 / Piece", note: "Starting price based on work" },
-      { name: "Blanket / Quilt", price: "₹299 / Piece", note: "Deep sanitized wash" },
+      { name: "Suit (2 Piece)", price: "₹349 / Set", note: "Blazer & Pant" },
+      { name: "Saree", price: "₹199 / Piece", note: "Standard dry cleaning" },
+      { name: "Heavy Dress / Lehenga", price: "₹399+ / Piece", note: "Starting price based on work" },
+      { name: "2 Blankets Dry Cleaned", price: "₹549", note: "Deep sanitized wash", isOffer: true },
     ]
   },
   {
     category: "Home & Specialty",
     description: "Deep cleaning services brought right to your doorstep.",
     items: [
-      { name: "Premium Shoe Cleaning", price: "₹299 / Pair", note: "Complete restoration" },
-      { name: "Sofa Cleaning", price: "₹449 / Seat", note: "Dry vacuuming & shampoo" },
-      { name: "Carpet Cleaning", price: "₹40 / Sq.Ft", note: "Deep extraction cleaning" },
-      { name: "Curtain Cleaning", price: "₹199 / Panel", note: "Steam & fabric conditioning" },
+      { name: "Premium Shoe Cleaning", price: "₹249 / Pair", note: "Complete restoration" },
+      { name: "Sofa Drycleaning", price: "₹199 / Seat", note: "Dry vacuuming & shampoo" },
+      { name: "Carpet Cleaning", price: "₹20 / Sq.Ft", note: "Deep extraction cleaning" },
+      { name: "Curtain Cleaning", price: "₹120 / Panel", note: "Steam & fabric conditioning" },
     ]
   }
 ];
@@ -93,7 +94,14 @@ export default function PricingPage() {
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="px-6 py-5 sm:px-8 flex flex-col sm:flex-row sm:items-center justify-between hover:bg-slate-50 transition-colors">
                     <div className="mb-2 sm:mb-0">
-                      <h3 className="text-lg font-bold text-slate-800">{item.name}</h3>
+                      <h3 className="text-lg font-bold text-slate-800">
+                        {item.name}
+                        {item.isOffer && (
+                          <span className="ml-3 inline-block text-[0.65rem] uppercase font-black tracking-wider bg-green-100 text-green-700 px-2.5 py-0.5 rounded-full align-middle">
+                            Offer Price
+                          </span>
+                        )}
+                      </h3>
                       {item.note && <p className="text-sm text-slate-500">{item.note}</p>}
                     </div>
                     <div className="text-left sm:text-right">

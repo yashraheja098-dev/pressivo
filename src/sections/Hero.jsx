@@ -25,7 +25,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-32 pb-10 overflow-hidden bg-background">
+    <section className="relative pt-20 pb-10 overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Hero Content */}
@@ -38,6 +38,10 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="lg:col-span-7 max-w-3xl"
           >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-bold text-sm mb-6 shadow-sm border border-accent/20">
+              <Star size={16} className="fill-accent text-accent" />
+              <span>Gurgaon's #1 Premium Laundry Service</span>
+            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] mb-6 text-primary tracking-tight">
               Premium Dry Cleaning & <br className="hidden sm:block" />
               Laundry <span className="text-accent">Delivered to</span> <br className="hidden sm:block" />

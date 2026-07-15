@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const pricingList = [
-  { name: "Laundry by KG", price: "₹80/kg" },
+  { name: "Wash & Fold", price: "₹80/kg" },
   { name: "Wash & Iron", price: "₹110/kg" },
-  { name: "Steam Iron", price: "₹10+/piece" },
-  { name: "Blanket Dry Clean", price: "₹299" },
-  { name: "Sofa Cleaning", price: "₹449 onwards" },
   { name: "Premium Laundry", price: "₹150/kg" },
+  { name: "2 Blankets Dry Cleaned", price: "₹549" },
+  { name: "Sofa Drycleaning", price: "₹199/seat" },
+  { name: "Standard Steam Ironing", price: "₹12+/piece" },
 ];
 
 export default function Pricing() {
