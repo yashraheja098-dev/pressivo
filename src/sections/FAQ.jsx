@@ -17,10 +17,6 @@ const faqs = [
     a: "Absolutely. Our premium dry cleaning service is specifically designed for delicate fabrics, suits, sarees, and designer wear."
   },
   {
-    q: "Do you offer monthly plans?",
-    a: "Yes, we have monthly wash & fold and wash & iron packages starting from ₹1800 for 30kg, which includes 4 pickups per month."
-  },
-  {
     q: "How do I pay?",
     a: "You can pay via UPI, Credit/Debit Card, or Cash on Delivery after you receive your fresh clothes."
   },

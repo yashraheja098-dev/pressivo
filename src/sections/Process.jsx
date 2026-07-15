@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Truck, WashingMachine, PackageOpen } from 'lucide-react';
-
+import { Calendar, Truck, WashingMachine, PackageOpen, Shirt, Users, MapPin, ShieldCheck } from 'lucide-react';
+import CountUpPkg from 'react-countup';
+const CountUp = CountUpPkg.default || CountUpPkg;
 const steps = [
   { icon: Calendar, title: "Book Pickup", desc: "Schedule a pickup at your convenience." },
   { icon: Truck, title: "We Collect", desc: "Our executive collects from your doorstep." },
@@ -10,6 +11,24 @@ const steps = [
 ];
 
 export default function Process() {
+  const stats = [
+    {
+      icon: (
+        <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
+          <span className="font-black text-primary text-xl leading-none w-6 h-6 flex items-center justify-center">G</span>
+        </div>
+      ),
+      value: "4.9",
+      suffix: " ★★★★★",
+      label: "Google Rating",
+      isCount: true
+    },
+    { icon: <Shirt size={28} />, value: "25000", suffix: "+", label: "Garments Cleaned", isCount: true },
+    { icon: <Users size={28} />, value: "5000", suffix: "+", label: "Happy Families", isCount: true },
+    { icon: <MapPin size={28} />, value: "Serving", suffix: "", label: "Entire Gurgaon", isCount: false },
+    { icon: <ShieldCheck size={28} />, value: "100%", suffix: "", label: "Quality Guarantee", isCount: false },
+  ];
+
   return (
     <section id="process" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,6 +78,39 @@ export default function Process() {
             ))}
           </div>
         </div>
+
+        {/* Stats Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="bg-primary rounded-2xl md:rounded-full py-6 px-4 md:px-8 shadow-2xl mt-24 relative z-20"
+        >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 divide-y divide-white/10 md:divide-y-0 md:divide-x">
+            {stats.map((stat, idx) => (
+              <div key={idx} className={`flex items-center justify-center gap-4 ${idx !== 0 ? 'pt-4 md:pt-0' : ''}`}>
+                <div className="text-white shrink-0">
+                  {stat.icon}
+                </div>
+                <div className="text-white">
+                  <div className="font-bold text-lg leading-tight flex items-center gap-1">
+                    {stat.isCount ? (
+                      <CountUp end={parseFloat(stat.value)} decimals={stat.value.includes('.') ? 1 : 0} duration={2.5} separator="," />
+                    ) : (
+                      <span>{stat.value}</span>
+                    )}
+                    <span>{stat.suffix}</span>
+                  </div>
+                  <div className="text-xs text-white/70 font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

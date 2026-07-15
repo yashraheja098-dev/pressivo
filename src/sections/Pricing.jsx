@@ -1,83 +1,84 @@
-import { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import SectionHeading from '../components/ui/SectionHeading';
-import PricingCard from '../components/ui/PricingCard';
-import { openWhatsApp } from '../utils/constants';
+import { useNavigate } from 'react-router-dom';
 
-const categories = ["Laundry", "Monthly Packages", "Car Detailing", "Specialty Cleaning"];
-
-const pricingData = {
-  "Laundry": [
-    { title: "Standard Steam Iron", price: "₹10", unit: "/ Piece", features: ["Crisp finish", "Next day delivery", "Hanger packing"], isPopular: false, image: "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=600" },
-    { title: "Premium Steam Iron", price: "₹25", unit: "/ Piece", features: ["Perfect for suits/sarees", "Special fabric care", "Premium packaging"], isPopular: false, image: "https://images.unsplash.com/photo-1626497764746-6dc36546b388?auto=format&fit=crop&q=80&w=600" },
-    { title: "Wash & Fold", price: "₹80", unit: "/ KG", features: ["Premium detergents", "Softener included", "Neatly folded"], isPopular: false, image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=600" },
-    { title: "Wash & Iron", price: "₹110", unit: "/ KG", features: ["Washing & Steam Ironing", "Stain inspection", "Free pickup & delivery"], isPopular: true, image: "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=600" },
-    { title: "Premium Laundry", price: "₹150", unit: "/ KG", features: ["Individual washing", "Fabric specific care", "Luxury packaging"], isPopular: false, image: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=600" },
-    { title: "Dry Cleaning", price: "₹199", unit: "Starting", features: ["Stain removal", "Delicate fabric handling", "Individual crisp packaging"], isPopular: false, image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&q=80&w=600" },
-  ],
-  "Monthly Packages": [
-    { title: "Wash & Fold 30KG", price: "₹1800", unit: "/ Month", features: ["30 KG limit", "4 Pickups per month", "Premium detergents", "Rollover not allowed"], isPopular: false, image: "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&q=80&w=600" },
-    { title: "Wash & Iron 30KG", price: "₹2300", unit: "/ Month", features: ["30 KG limit", "4 Pickups per month", "Steam ironing included", "Priority support"], isPopular: true, image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=600" },
-  ],
-  "Car Detailing": [
-    { title: "Exterior Package", price: "₹599", unit: "Starting", features: ["Foam wash", "Tyre polish", "Glass cleaning"], isPopular: false, image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=600" },
-    { title: "Interior Package", price: "₹599", unit: "Starting", features: ["Deep vacuuming", "Dashboard polish", "Seat dry cleaning"], isPopular: false, image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600" },
-    { title: "Complete Package", price: "₹999", unit: "Starting", features: ["Interior + Exterior", "Wax polish", "Odor removal", "Engine bay cleaning"], isPopular: true, image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=600" },
-  ],
-  "Specialty Cleaning": [
-    { title: "Shoe Cleaning", price: "₹299", unit: "Starting", features: ["Deep stain removal", "Odor treatment", "Fabric restoration"], isPopular: true, image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600" },
-    { title: "Sofa Cleaning", price: "₹499", unit: "/ Seat", features: ["Dry vacuuming", "Deep shampooing", "Spot treatment"], isPopular: false, image: "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&q=80&w=600" },
-    { title: "Curtain Cleaning", price: "₹199", unit: "/ Panel", features: ["Dust removal", "Steam cleaning", "Fabric conditioning"], isPopular: false, image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=600" },
-  ]
-};
+const pricingList = [
+  { name: "Laundry by KG", price: "₹80/kg" },
+  { name: "Wash & Iron", price: "₹110/kg" },
+  { name: "Steam Iron", price: "₹10+/piece" },
+  { name: "Blanket Dry Clean", price: "₹299" },
+  { name: "Sofa Cleaning", price: "₹449 onwards" },
+  { name: "Premium Laundry", price: "₹150/kg" },
+];
 
 export default function Pricing() {
-  const [activeCategory, setActiveCategory] = useState("Laundry");
+  const navigate = useNavigate();
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50 border-y border-slate-200 relative overflow-hidden">
-      {/* Decorative gradient blob */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-900/5 blur-[120px] rounded-full pointer-events-none" />
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionHeading 
-          title="Transparent Pricing" 
-          subtitle="Premium quality doesn't have to break the bank. Choose the service that fits your needs."
-          dark={false}
-        />
+    <section id="pricing" className="py-24 bg-white relative overflow-hidden font-sans">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+        
+        {/* Heading Section */}
+        <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true }}
+            className="h-1 w-16 bg-[#D4A017] mx-auto mb-6 rounded-full"
+          />
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-black text-[#0E1B3A] tracking-tight mb-4"
+          >
+            Transparent Pricing
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed"
+          >
+            Starting prices for our most popular cleaning services. View our complete price list for all services and detailed pricing.
+          </motion.p>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                activeCategory === cat 
-                  ? 'bg-primary text-accent shadow-md border border-accent/50' 
-                  : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-primary shadow-sm'
-              }`}
+        {/* Pricing Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
+          {pricingList.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              className="flex justify-between items-center bg-white rounded-[14px] border border-[#ECECEC] p-6 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 group"
             >
-              {cat}
-            </button>
+              <span className="font-semibold text-slate-600 group-hover:text-[#0E1B3A] transition-colors">{item.name}</span>
+              <span className="font-bold text-[#D4A017] text-lg tracking-wide">{item.price}</span>
+            </motion.div>
           ))}
         </div>
 
+        {/* CTA Section */}
         <motion.div 
-          key={activeCategory}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-6xl mx-auto"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center text-center"
         >
-          {pricingData[activeCategory].map((plan, idx) => (
-            <PricingCard 
-              key={idx}
-              {...plan}
-              delay={idx * 0.1}
-              onBook={openWhatsApp}
-            />
-          ))}
+          <button 
+            onClick={() => navigate('/pricing')}
+            className="bg-[#D4A017] hover:bg-[#b58813] text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 mb-8 flex items-center gap-2 group"
+          >
+            View Complete Price List 
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+
         </motion.div>
+
       </div>
     </section>
   );

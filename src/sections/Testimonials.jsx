@@ -24,14 +24,14 @@ const reviews = [
   {
     name: "Amit Patel",
     location: "Golf Course Road",
-    text: "Car detailing exceeded expectations. The guys were professional, brought their own equipment, and the car looks brand new.",
+    text: "Dry cleaning exceeded expectations. The team was professional, picked up on time, and the suits look brand new.",
     rating: 5,
     img: "https://i.pravatar.cc/150?u=3"
   },
   {
     name: "Neha Gupta",
     location: "Sushant Lok",
-    text: "Switched to their monthly package 3 months ago. It's affordable and completely eliminated my laundry headaches.",
+    text: "Started using their premium laundry service 3 months ago. It's affordable and completely eliminated my laundry headaches.",
     rating: 5,
     img: "https://i.pravatar.cc/150?u=4"
   }

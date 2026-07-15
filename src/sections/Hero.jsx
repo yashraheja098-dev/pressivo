@@ -1,19 +1,11 @@
 import { motion } from 'framer-motion';
 import CountUpPkg from 'react-countup';
 const CountUp = CountUpPkg.default || CountUpPkg;
-import { CheckCircle2, Truck, MessageCircle, Star, Shirt, Users, MapPin, ShieldCheck } from 'lucide-react';
+import { Truck, MessageCircle, Star, Shirt, Users, MapPin, ShieldCheck } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { openWhatsApp } from '../utils/constants';
 
 export default function Hero() {
-  const features = [
-    "Fabric Safe Cleaning",
-    "Expert Stain Removal",
-    "Eco Friendly Process",
-    "Hygienic Packaging",
-    "On-Time Delivery"
-  ];
-
   const stats = [
     {
       icon: (
@@ -52,19 +44,6 @@ export default function Hero() {
               <span className="text-accent">Your Doorstep.</span>
             </h1>
             
-            <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
-              Professional Dry Cleaning, Laundry, Shoe Cleaning, Curtain Cleaning, Sofa Cleaning & Carpet Cleaning with Free Pickup & Delivery Across Gurgaon.
-            </p>
-            
-            {/* Features Row */}
-            <div className="flex flex-wrap gap-4 mb-10">
-              {features.map((feature, idx) => (
-                <div key={idx} className="flex items-center gap-1.5 text-sm font-semibold text-slate-700">
-                  <CheckCircle2 size={18} className="text-accent" />
-                  <span>{feature}</span>
-                </div>
-              ))}
-            </div>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
