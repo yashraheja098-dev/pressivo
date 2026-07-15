@@ -6,8 +6,8 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-white border-y border-slate-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading 
-          title="Get In Touch" 
+        <SectionHeading
+          title="Get In Touch"
           subtitle="Have a special request? Visit our store or contact us directly."
         />
 
@@ -47,13 +47,13 @@ export default function Contact() {
 
           <div className="rounded-2xl overflow-hidden h-[400px] lg:h-auto border border-slate-200 shadow-sm relative bg-slate-100">
             {/* Google Map Placeholder without dark mode inversion */}
-            <iframe 
-              src="https://maps.google.com/maps?q=Suncity%20Avenue%2C%20Sector%20102%2C%20Gurgaon%20122006&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://maps.google.com/maps?q=Suncity%20Avenue%2C%20Sector%20102%2C%20Gurgaon%20122006&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
