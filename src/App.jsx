@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/layout/Footer';
 import MobileBottomBar from './components/layout/MobileBottomBar';
 import BookingModal from './components/ui/BookingModal';
@@ -14,6 +15,7 @@ import { openWhatsApp } from './utils/constants';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-primary selection:text-white font-sans overflow-x-hidden">
         <Navbar />
         
