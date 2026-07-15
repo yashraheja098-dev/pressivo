@@ -42,14 +42,14 @@ export default function Services() {
   const navigate = useNavigate();
 
   return (
-    <section id="services" className="py-24 relative bg-background overflow-hidden">
+    <section id="services" className="pt-24 pb-16 relative bg-background overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Premium Care For Everything" 
           subtitle="From your daily wear to your home furnishings, we provide professional care with unmatched convenience."
         />
         
-        <div className="mt-16 pb-12">
+        <div className="mt-12">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
             {services.map((service, index) => (
               <div key={index} className="h-auto">
