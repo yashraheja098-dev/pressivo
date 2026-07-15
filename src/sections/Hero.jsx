@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import CountUpPkg from 'react-countup';
 const CountUp = CountUpPkg.default || CountUpPkg;
-import { Truck, MessageCircle, Star, Shirt, Users, MapPin, ShieldCheck } from 'lucide-react';
+import { Truck, MessageCircle, Star, Shirt, Users, MapPin, ShieldCheck, Clock, Sparkles } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { openWhatsApp } from '../utils/constants';
 
@@ -55,6 +55,28 @@ export default function Hero() {
                 <MessageCircle size={20} />
                 WhatsApp Us
               </Button>
+            </div>
+
+            {/* Feature Mini Cards */}
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
+              <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-xl p-3 flex items-center gap-3 transition-transform hover:-translate-y-1">
+                <div className="bg-slate-50 p-2 rounded-lg text-accent">
+                  <ShieldCheck size={20} />
+                </div>
+                <span className="text-sm font-bold text-slate-800 leading-tight">Premium<br/>Quality</span>
+              </div>
+              <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-xl p-3 flex items-center gap-3 transition-transform hover:-translate-y-1">
+                <div className="bg-slate-50 p-2 rounded-lg text-accent">
+                  <Sparkles size={20} />
+                </div>
+                <span className="text-sm font-bold text-slate-800 leading-tight">Hygienic<br/>Cleaning</span>
+              </div>
+              <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-xl p-3 flex items-center gap-3 transition-transform hover:-translate-y-1">
+                <div className="bg-slate-50 p-2 rounded-lg text-accent">
+                  <Clock size={20} />
+                </div>
+                <span className="text-sm font-bold text-slate-800 leading-tight">On-time<br/>Delivery</span>
+              </div>
             </div>
           </motion.div>
 

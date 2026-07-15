@@ -13,7 +13,7 @@ export default function Contact() {
 
         <div className="mt-16 grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="space-y-8">
-            <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
+            <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] rounded-2xl p-6 flex items-start gap-4 transition-all duration-300">
               <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <MapPin size={24} />
               </div>
@@ -23,7 +23,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
+            <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] rounded-2xl p-6 flex items-start gap-4 transition-all duration-300">
               <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <Phone size={24} />
               </div>
@@ -34,7 +34,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="glass-card bg-white border-slate-200 p-6 flex items-start gap-4">
+            <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] rounded-2xl p-6 flex items-start gap-4 transition-all duration-300">
               <div className="bg-white border border-slate-200 p-3 rounded-full text-accent shrink-0">
                 <Mail size={24} />
               </div>

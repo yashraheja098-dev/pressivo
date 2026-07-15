@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: 'Services', href: '#services', hasDropdown: true },
     { name: 'Pricing', href: '#pricing' },
     { name: 'About Us', href: '#why-us' },
-    { name: 'Gallery', href: '#gallery' },
+
     { name: 'Reviews', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },

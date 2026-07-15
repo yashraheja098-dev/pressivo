@@ -57,30 +57,29 @@ export default function AllServicesPage() {
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
       {/* Sleek Minimal Header */}
-      <section className="relative pt-32 pb-16 bg-white border-b border-slate-200 overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50 via-white to-white pointer-events-none" />
+      <section className="relative pt-32 pb-20 bg-primary text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-primary to-primary pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center justify-center p-3 bg-blue-50 text-primary rounded-full mb-6"
-          >
-            <Sparkles size={24} />
-          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.5 }}
+            className="h-1 w-16 bg-accent mx-auto mb-6 rounded-full"
+          />
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight"
           >
-            Comprehensive <span className="text-primary">Care</span>
+            Comprehensive Care
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-slate-500 leading-relaxed"
+            className="text-lg text-white/80 leading-relaxed"
           >
             A full suite of professional cleaning services tailored for your home and wardrobe.
           </motion.p>
@@ -99,7 +98,7 @@ export default function AllServicesPage() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 border border-slate-100 flex flex-col h-full"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 border border-slate-100 flex flex-col h-full"
               >
                 {/* Image Header */}
                 <div className="relative h-60 overflow-hidden">

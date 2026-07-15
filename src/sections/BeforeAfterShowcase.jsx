@@ -42,8 +42,7 @@ export default function BeforeAfterShowcase() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative aspect-[4/5] sm:aspect-square xl:aspect-[4/5] rounded-3xl overflow-hidden shadow-xl group bg-white"
+              className="relative aspect-[4/5] sm:aspect-square xl:aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] group bg-white hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] transition-all duration-300"
             >
               {item.isPreSplit ? (
                 <div className="w-full h-full bg-white">

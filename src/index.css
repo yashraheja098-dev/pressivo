@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+
+
 @theme {
-  --color-primary: #0A1B44;
-  --color-accent: #F5B400;
-  --color-background: #F7F9FC;
-  --font-sans: "Inter", sans-serif;
+  --color-primary: #0E1B3A;
+  --color-accent: #D4A017;
 }
 
 @layer base {
@@ -13,18 +13,8 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-primary font-sans antialiased overflow-x-hidden;
+    @apply bg-slate-50 text-slate-700 font-sans antialiased overflow-x-hidden;
   }
 }
 
-@layer utilities {
-  .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-slate-200/50 shadow-sm;
-  }
-  .glass-card {
-    @apply bg-white/90 backdrop-blur-md border border-slate-100 rounded-2xl shadow-lg transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5;
-  }
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-cyan-500;
-  }
-}
+

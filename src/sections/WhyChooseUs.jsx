@@ -55,12 +55,13 @@ export default function WhyChooseUs() {
             className="relative h-[600px] rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl hidden lg:block"
           >
             <img 
-              src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?q=80&w=2071&auto=format&fit=crop" 
-              alt="Premium Laundry Care" 
+              src="/why choose us.png" 
+              alt="Happy customer receiving clothes" 
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
-            <div className="absolute bottom-10 left-10 right-10 p-6 glass-card bg-white/90 rounded-2xl">
+            <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+
+            <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/95 backdrop-blur-md border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] rounded-2xl">
               <h3 className="text-2xl font-bold mb-2 text-slate-900">"The best laundry service I've ever used in Gurgaon."</h3>
               <p className="text-primary font-medium">- Rahul Sharma, DLF Phase 5</p>
             </div>

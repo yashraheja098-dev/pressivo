@@ -60,9 +60,9 @@ export default function Testimonials() {
             className="pb-16"
           >
             {reviews.map((review, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="glass-card bg-white p-8 h-full flex flex-col shadow-sm border-slate-200">
-                  <div className="flex items-center gap-1 mb-6 text-primary">
+              <SwiperSlide key={idx} className="h-auto">
+                <div className="bg-white border border-slate-100 shadow-[0_2px_10px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_20px_-6px_rgba(0,0,0,0.1)] rounded-2xl p-8 h-full flex flex-col transition-all duration-300">
+                  <div className="flex items-center gap-1 mb-6 text-accent">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} size={16} fill="currentColor" />
                     ))}
