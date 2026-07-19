@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <a href="#" className="flex flex-col">
-              <span className="text-3xl sm:text-4xl font-black tracking-tight text-primary leading-none">
+              <span className="text-5xl md:text-4xl font-black tracking-tight text-primary leading-none">
                 PRESS<span className="text-accent">IVO</span>
               </span>
               <span className="text-[0.55rem] font-bold text-slate-500 tracking-widest mt-1">

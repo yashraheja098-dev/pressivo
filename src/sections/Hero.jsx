@@ -25,7 +25,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-20 pb-10 overflow-hidden bg-background">
+    <section className="relative pt-32 md:pt-24 pb-10 overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Hero Content */}
