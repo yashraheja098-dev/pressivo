@@ -5,23 +5,23 @@ import SectionHeading from '../components/ui/SectionHeading';
 const showcaseData = [
   {
     title: "Shoe Cleaning",
-    image: "/shoes-before-after.png",
+    image: "/shoes-before-after.webp",
     isPreSplit: true
   },
   {
     title: "Sofa Cleaning",
-    image: "/sofa-before-after.png",
+    image: "/sofa-before-after.webp",
     isPreSplit: true,
     objectFit: "contain"
   },
   {
     title: "Curtain Cleaning",
-    image: "/curtain-before-after.png",
+    image: "/curtain-before-after.webp",
     isPreSplit: true
   },
   {
     title: "Carpet Cleaning",
-    image: "/carpet-before-after.png",
+    image: "/carpet-before-after.webp",
     isPreSplit: true
   }
 ];

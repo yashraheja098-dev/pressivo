@@ -92,7 +92,7 @@ export default function Hero() {
           >
             <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5] [mask-image:linear-gradient(to_left,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_left,black_85%,transparent_100%)]">
               <img 
-                src="/hero-person.jpg" 
+                src="/hero-person.webp" 
                 alt="Delivery Executive holding laundry bag" 
                 className="w-full h-full object-cover object-top"
               />

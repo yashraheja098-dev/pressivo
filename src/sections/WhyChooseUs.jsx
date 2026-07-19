@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             className="relative h-[600px] rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl hidden lg:block"
           >
             <img 
-              src="/why choose us.png" 
+              src="/why choose us.webp" 
               alt="Happy customer receiving clothes" 
               className="absolute inset-0 w-full h-full object-cover"
             />

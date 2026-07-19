@@ -8,32 +8,32 @@ const services = [
   {
     title: "Laundry by KG",
     description: "Fresh, folded, everyday wear.",
-    image: "/clean clothes.png"
+    image: "/clean clothes.webp"
   },
   {
     title: "Premium Drycleaning",
     description: "Expert care for delicate fabrics.",
-    image: "/dry cleaning.png"
+    image: "/dry cleaning.webp"
   },
   {
     title: "Steam Ironing",
     description: "Crisp, wrinkle-free steam ironing.",
-    image: "/steam ironing.png"
+    image: "/steam ironing.webp"
   },
   {
     title: "Curtain Drycleaning",
     description: "Expert curtain dust & steam cleaning.",
-    image: "/curtain cleaning.png"
+    image: "/curtain cleaning.webp"
   },
   {
     title: "Sofa Drycleaning",
     description: "Professional sofa dry vacuuming.",
-    image: "/sofa cleaning.png"
+    image: "/sofa cleaning.webp"
   },
   {
     title: "Carpet Cleaning",
     description: "Deep extraction carpet cleaning.",
-    image: "/carpet cleaning.png"
+    image: "/carpet cleaning.webp"
   }
 ];
 
